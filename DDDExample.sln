@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.810.9
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDExample", "DDDExample\DDDExample.csproj", "{AA7AFF9F-85E3-4BEA-B9FD-1F68BDB536EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDExample.Api", "DDDExample\DDDExample.Api.csproj", "{AA7AFF9F-85E3-4BEA-B9FD-1F68BDB536EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DDDExample.Logic", "DDDExample.Logic\DDDExample.Logic.csproj", "{5536D9F2-5A0C-441F-A65F-DD56870074D2}"
 EndProject
