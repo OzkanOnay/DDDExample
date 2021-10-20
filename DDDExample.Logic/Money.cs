@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace DDDLogic
 {
     public class Money : ValueObject<Money>
@@ -122,28 +124,15 @@ namespace DDDLogic
             return sum;
         }
 
-        protected override bool EqualsCore(Money other)
+        protected override IEnumerable<object> GetEqualityComponents()
         {
-            return OneCentCount == other.OneCentCount
-                && TenCentCount == other.TenCentCount
-                && QuarterCount == other.QuarterCount
-                && OneDollarCount == other.OneDollarCount
-                && FiveDollarCount == other.FiveDollarCount
-                && TwentyDollarCount == other.TwentyDollarCount;
+            yield return OneCentCount;
+            yield return TenCentCount;
+            yield return QuarterCount;
+            yield return OneDollarCount;
+            yield return FiveDollarCount;
+            yield return TwentyDollarCount;
         }
 
-        protected override int GetHashCodeCore()
-        {
-            unchecked
-            {
-                int hashCode = OneCentCount;
-                hashCode = (hashCode * 397) ^ TenCentCount;
-                hashCode = (hashCode * 397) ^ QuarterCount;
-                hashCode = (hashCode * 397) ^ OneDollarCount;
-                hashCode = (hashCode * 397) ^ FiveDollarCount;
-                hashCode = (hashCode * 397) ^ TwentyDollarCount;
-                return hashCode;
-            }
-        }
     }
 }

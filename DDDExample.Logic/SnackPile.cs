@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using DDDLogic;
 
 namespace DDDExample.Logic
@@ -32,14 +33,11 @@ namespace DDDExample.Logic
             return new SnackPile(Quantity - 1, Price, Snack);
         }
 
-        protected override bool EqualsCore(SnackPile other)
+        protected override IEnumerable<object> GetEqualityComponents()
         {
-            throw new NotImplementedException();
-        }
-
-        protected override int GetHashCodeCore()
-        {
-            throw new NotImplementedException();
+            yield return Snack;
+            yield return Quantity;
+            yield return Price;
         }
     }
 }
