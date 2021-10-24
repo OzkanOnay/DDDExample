@@ -11,6 +11,7 @@
     <None Remove="Common\" />
     <None Remove="SharedKernel\" />
     <None Remove="SnackMachines\" />
+    <None Remove="ATM\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.11">
@@ -27,5 +28,6 @@
     <Folder Include="Common\" />
     <Folder Include="SharedKernel\" />
     <Folder Include="SnackMachines\" />
+    <Folder Include="ATM\" />
   </ItemGroup>
 </Project>
